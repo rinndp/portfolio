@@ -1,0 +1,13 @@
+.container {
+    background-color: #050633;
+    box-shadow: 0 0 11px #241b73;
+
+    .button {
+        width: 2rem;
+        filter: invert(1);
+    }
+    .button:hover {
+        filter: invert(0) drop-shadow(0 0 7px #ffffff);
+        transition: filter 0.3s ease-in-out;
+    }
+}
