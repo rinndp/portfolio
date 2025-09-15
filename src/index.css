@@ -1,5 +1,39 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: "Frutiger";
+    src: url("/src/assets/fonts/frutiger.ttf");
+}
+
+.subtitle {
+    font-family: "Frutiger", sans-serif;
+    letter-spacing: 5px;
+    font-size: 1.9rem;
+    position: relative;    /* necesario para que ::after se posicione relativo a cada h2 */
+    display: inline-block;
+}
+
+.subtitle::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 6px;
+    background-color: var(--light-purple);
+    border-radius: 40%;
+}
+
+.text {
+    font-size: 1.2rem;
+    text-align: justify;
+    color: #e0e0e0;
+}
+
 :root {
     background-color: #03041c;
+    overflow: auto;
+    scroll-behavior: smooth;
+    --light-purple: #b0abe1;
 }

@@ -7,7 +7,7 @@
         filter: invert(1);
     }
     .button:hover {
-        filter: invert(0) drop-shadow(0 0 7px #ffffff);
-        transition: filter 0.3s ease-in-out;
+        filter: invert(1) drop-shadow(0 0 7px #ffffff);
+        transition: filter 0.1s ease-in-out;
     }
 }

@@ -1,0 +1,40 @@
+body {
+    color: #ffffff;
+    background-color: #03041c;
+    font-family: "Corbel Light", serif;
+}
+
+.header-container {
+    margin-top: -100vh;
+}
+
+.name {
+    color: var(--light-purple);
+    text-transform: uppercase;
+}
+
+.techIconsContainer{
+    display: flex;
+    justify-content: center;/* Opcional: centra los iconos */
+
+    gap: 1rem;
+}
+.logo {
+    width: 2.2rem;
+}
+.logo.react:hover {
+    filter: drop-shadow(0 0 0.9em #00bef6);
+}
+.logo.vite:hover {
+    filter: drop-shadow(0 0 0.9em #1900f6);
+}
+.description {
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+.title {
+    font-family: "Frutiger" , serif;
+    letter-spacing: 6px;
+}
+
