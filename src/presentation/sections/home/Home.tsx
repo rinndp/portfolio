@@ -1,7 +1,7 @@
 import reactLogo from "../../../assets/react.svg";
 import viteLogo from "../../../assets/vitejs-logo.png";
 import tailwindLogo from "../../../assets/tailwind-logo.png";
-import './StylesHeader.css';
+import './StylesHome.css';
 
 const HeaderPortfolio = () => {
     return (
@@ -13,10 +13,8 @@ const HeaderPortfolio = () => {
             </div>
             <h1 className="title text-7xl font-bold">HI! I'M <span className={"name"}>Axel Rojas</span></h1>
             <p className="description max-w-2xl">
-                Specialized in <span className="text-blue-200">React Native</span> and
-                <span className="text-green-100"> Django</span>, with experience in building several mobile
-                applications.
-                I’m looking for new opportunities to keep growing.
+                Junior Mobile App Developer specialized in <span className="text-blue-200">React Native</span> and
+                <span className="text-green-100"> Django</span>. <br/>I’m looking for new opportunities to keep growing.
             </p>
         </div>
     )

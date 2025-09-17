@@ -1,4 +1,6 @@
 import home from "../../../assets/home.png";
+import user from "../../../assets/user.png";
+import pen from "../../../assets/pen.png";
 import "./StyleSideTabBar.css"
 
 const SideTabBar = () => {
@@ -8,12 +10,12 @@ const SideTabBar = () => {
             id: "home",
         },
         {
-            src: home,
+            src: user,
             id: "about-me",
         },
         {
-            src: home,
-            id: "home",
+            src: pen,
+            id: "projects",
         },
     ]
     return (

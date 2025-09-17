@@ -1,10 +1,11 @@
 import './App.css'
-import SideTabBar from "./presentation/components/SideTabBar/SideTabBar.tsx";
-import HeaderPortfolio from "./presentation/sections/header/Header.tsx";
+import SideTabBar from "./presentation/components/side-tab-bar/SideTabBar.tsx";
+import HeaderPortfolio from "./presentation/sections/home/Home.tsx";
 import AboutMe from "./presentation/sections/about-me/AboutMe.tsx";
 import {useEffect} from "react";
 import AOS from "aos";
 import 'aos/dist/aos.css';
+import Projects from "./presentation/sections/projects/Projects.tsx";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <SideTabBar/>
         <HeaderPortfolio/>
         <AboutMe/>
+        <Projects/>
     </>
   )
 }
