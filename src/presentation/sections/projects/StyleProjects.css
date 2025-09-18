@@ -1,0 +1,30 @@
+.project-card {
+    background-color: var(--dark-purple);
+    border-radius: 17px;
+}
+
+.project-card:hover {
+    background-color: var(--dark-purple);
+    filter: drop-shadow(0 0 0.2em var(--gray));
+    transition: filter 0.4s;
+}
+
+.project-card img {
+    transition: transform 0.5s;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+    transition: transform 0.5s;
+}
+
+.project-img {
+    border-radius: 17px;
+}
+
+.description-project {
+    color: var(--text-color)
+}

@@ -87,7 +87,7 @@ const AboutMe = () => {
                     </div>
                     <div className="w-1/2">
                         <h2 className="text-2xl font-bold text-center">Tech stack</h2><br/>
-                        <div className="flex flex-wrap gap-3 h-20">
+                        <div data-aos="zoom-in-right" className="flex flex-wrap gap-3 h-20">
                             {techStack.map((tech, index) => (
                                 <div
                                     key={index}

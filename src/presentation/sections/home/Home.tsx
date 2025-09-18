@@ -1,7 +1,7 @@
 import reactLogo from "../../../assets/react.svg";
 import viteLogo from "../../../assets/vitejs-logo.png";
 import tailwindLogo from "../../../assets/tailwind-logo.png";
-import './StylesHome.css';
+import './StyleHome.css';
 
 const HeaderPortfolio = () => {
     return (

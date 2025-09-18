@@ -4,13 +4,34 @@
     font-family: "Frutiger";
     src: url("/src/assets/fonts/frutiger.ttf");
 }
+
+:root {
+    background-image: url("/src/assets/background-gradient.gif");
+    backdrop-filter: blur(1px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: auto;
+    color: var(--light-gray);
+    scroll-behavior: smooth;
+    --light-purple: #b0abe1;
+    --dark-purple: #14071a;
+    --gray: #858383;
+    --white: #ffffff;
+    --light-gray: #e0e0e0;
+    --text-color: #b6b6b6;
+}
+
 .button {
     width: 2rem;
     filter: invert(1);
+    transition: filter 0.3s ease-in-out, transform 0.4s ease;
 }
 .button:hover {
-    filter: invert(1) drop-shadow(0 0 7px #ffffff);
-    transition: filter 0.1s ease-in-out;
+    filter: invert(1) drop-shadow(0 0 7px var(--white));
+    transform: scale(1.10);
+    transition: filter 0.3s ease-in-out, transform 0.4s ease;
 }
 
 .subtitle {
@@ -37,13 +58,5 @@
 .text {
     font-size: 1.2rem;
     text-align: justify;
-    color: #e0e0e0;
-}
-
-:root {
-    background-color: #03041c;
-    overflow: auto;
-    scroll-behavior: smooth;
-    --light-purple: #b0abe1;
-    --dark-purple: #16163d;
+    color: var(--text-color);
 }
