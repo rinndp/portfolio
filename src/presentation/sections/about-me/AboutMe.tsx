@@ -64,8 +64,8 @@ const AboutMe = () => {
                 <h2 className="subtitle">About me</h2>
                 <div className={"flex flex-row justify-center mt-5 gap-7 ps-10"}>
                     <div className={"flex-1"}>
-                        <h2 className="text-2xl font-bold text-left">Know more about me</h2>
-                        <p className={"text max-w-2xl justify mt-5"}>My name is Axel, and I am a junior mobile app
+                        <h2 data-aos={"fade-right"} className="text-2xl font-bold text-left">Know more about me</h2>
+                        <p data-aos={"fade-up"} className={"text max-w-2xl justify mt-5"}>My name is Axel, and I am a junior mobile app
                             developer with a <b>Associate Degree in Cross-platform Application
                                 Development</b> (equivalent to a Higher Vocational Training degree in Spain). After
                             completing my studies and a three-month internship, I am now looking for my first full-time
@@ -86,10 +86,10 @@ const AboutMe = () => {
                         </div>
                     </div>
                     <div className="w-1/2">
-                        <h2 className="text-2xl font-bold text-center">Tech stack</h2><br/>
-                        <div data-aos="zoom-in-right" className="flex flex-wrap gap-3 h-20">
+                        <h2 data-aos={"fade-left"} className="text-2xl font-bold text-center">Tech stack</h2><br/>
+                        <div className="flex flex-wrap gap-3 h-20">
                             {techStack.map((tech, index) => (
-                                <div
+                                <div data-aos={"fade-left"}
                                     key={index}
                                     className="tech-card-container h-10 text-white px-4 py-2 rounded-xl shadow-md"
                                 >

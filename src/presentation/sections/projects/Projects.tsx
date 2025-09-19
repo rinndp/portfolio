@@ -1,24 +1,30 @@
 import img from "../../../assets/tailwind-logo.png"
 import "./StyleProjects.css"
+import {useNavigate} from "react-router-dom";
 
 const Projects = () => {
     const projects = [
         {
             name: "Wimm",
+            slug: "wimm",
             img: img,
-            description: "ola",
+            description: "Managing your debtors and creditors has never been so easy",
         },
         {
             name: "GamingSwipe",
+            slug: "gaming-swipe",
             img: img,
-            description: "ola",
+            description: "Discover new games through swipes, manage your game library and see other people's libraries",
         },
         {
             name: "Calculator",
+            slug: "calculator",
             img: img,
-            description: "ola",
+            description: "Basic calculator made with Android Studio",
         },
     ]
+
+    const navigate = useNavigate();
 
     return (
         <>
@@ -27,14 +33,14 @@ const Projects = () => {
                 <h2 className="subtitle">My projects</h2>
                 <div className="flex flex-row justify-center ps-10 gap-5 mt-7">
                     {projects.map((project) => (
-                        <div className={"project-card flex flex-col gap-3 p-8"}>
+                        <div data-aos={"fade-left"} className={"project-card flex flex-col gap-3 p-8"}>
                             <img className={"project-img"} src={project.img} alt={project.name+" photo"}/>
                             <h2 className={"text-left text-xl font-bold mt-3"}>{project.name}</h2>
-                            <p className={"description-project text-left"}>{project.description}</p>
-                            <div className={"flex flex-row mt-3"}>
-                                <p className={"w-1/2 text-left"}>ola</p>
-                                <p className={"w-1/2 text-right"}>ola</p>
-                            </div>
+                            <p className={"description-project text-justify"}>{project.description}</p>
+                            <button data-aos={"zoom-in-left"}
+                                key={project.slug}
+                                onClick={() => {navigate(`/projects/${project.slug}`, { state: project})}}
+                                className={"details-button bg-white w-32 p-2"}>More details →</button>
                         </div>
                     ))}
                 </div>

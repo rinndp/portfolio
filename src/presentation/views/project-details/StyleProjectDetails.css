@@ -1,0 +1,33 @@
+.go-back-button{
+    background-color: var(--dark-purple);
+    border-radius: 12px;
+    transition: filter 0.4s;
+}
+
+.go-back-button:hover{
+    filter: drop-shadow(0 0 0.3em var(--gray));
+    transition: filter 0.4s;
+}
+
+.go-back-button:hover img{
+    transform: translateX(-10px);
+    transition: transform .2s;
+}
+
+.button-arrow {
+    width: 1.3em;
+    height: 1.1em;
+    align-self: center;
+    filter: invert(1);
+    transition: transform .2s;
+}
+
+.header-text-container {
+    align-items: center;
+    filter: opacity(80%);
+    img {
+        width: 1.0em;
+        height: 0.6em;
+        filter: invert(1) opacity(80%);
+    }
+}

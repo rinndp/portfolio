@@ -16,7 +16,8 @@
     color: var(--light-gray);
     scroll-behavior: smooth;
     --light-purple: #b0abe1;
-    --dark-purple: #14071a;
+    --dark-purple: rgba(20, 7, 26, 0.93);
+    --button-color: #2c1634;
     --gray: #858383;
     --white: #ffffff;
     --light-gray: #e0e0e0;

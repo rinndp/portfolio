@@ -6,6 +6,8 @@ import {useEffect} from "react";
 import AOS from "aos";
 import 'aos/dist/aos.css';
 import Projects from "./presentation/sections/projects/Projects.tsx";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import ProjectDetails from "./presentation/views/project-details/ProjectDetails.tsx";
 
 
 function App() {
@@ -16,12 +18,20 @@ function App() {
         return () => window.removeEventListener('resize', () => AOS.refresh());
     }, []);
   return (
-    <>
-        <SideTabBar/>
-        <HeaderPortfolio/>
-        <AboutMe/>
-        <Projects/>
-    </>
+    <BrowserRouter>
+        <Routes>
+            <Route path="/"
+                    element={
+                       <>
+                       <SideTabBar/>
+                        <HeaderPortfolio/>
+                        <AboutMe/>
+                        <Projects/>
+                    </>
+                   }/>
+            <Route path={"/projects/:slug"} element={<ProjectDetails/>}/>
+        </Routes>
+    </BrowserRouter>
   )
 }
 

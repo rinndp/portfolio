@@ -1,18 +1,18 @@
 .project-card {
     background-color: var(--dark-purple);
+    width: 30%;
     border-radius: 17px;
 }
 
 .project-card:hover {
-    background-color: var(--dark-purple);
     filter: drop-shadow(0 0 0.2em var(--gray));
     transition: filter 0.4s;
 }
 
 .project-card img {
     transition: transform 0.5s;
+    width: 21em;
     display: block;
-    width: 100%;
     height: auto;
 }
 
@@ -26,5 +26,19 @@
 }
 
 .description-project {
+    height: 5em;
     color: var(--text-color)
+}
+
+.details-button {
+    border-radius: 13px;
+    background-color: var(--button-color);
+    font-size: 0.9em;
+    transition: transform 0.5s, filter 0.4s;
+}
+
+.details-button:hover {
+    transform: scale(1.05);
+    filter: brightness(115%);
+    transition: transform 0.5s, filter 0.4s;
 }
