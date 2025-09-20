@@ -1,6 +1,11 @@
+@media (max-width: 1000px) {
+    .projects-container {display: block; justify-items: center; gap: 20px}
+}
+
 .project-card {
     background-color: var(--dark-purple);
     width: 30%;
+    min-width: 290px;
     border-radius: 17px;
 }
 
@@ -11,7 +16,8 @@
 
 .project-card img {
     transition: transform 0.5s;
-    width: 21em;
+    min-width: 200px;
+    border-radius: 17px;
     display: block;
     height: auto;
 }
@@ -21,12 +27,9 @@
     transition: transform 0.5s;
 }
 
-.project-img {
-    border-radius: 17px;
-}
-
 .description-project {
     height: 5em;
+    font-size: 0.9em;
     color: var(--text-color)
 }
 

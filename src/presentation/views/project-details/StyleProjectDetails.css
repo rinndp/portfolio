@@ -31,3 +31,8 @@
         filter: invert(1) opacity(80%);
     }
 }
+
+.project-details-img {
+    width: 500px;
+    border-radius: 10px;
+}

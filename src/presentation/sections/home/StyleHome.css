@@ -1,5 +1,6 @@
-.header-container {
-    margin-top: -100vh;
+
+@media (min-width: 768px) {
+    .header-container { margin-top: -100vh; }
 }
 
 .name {
@@ -21,7 +22,7 @@
     filter: drop-shadow(0 0 0.9em #1900f6);
 }
 .description {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-align: center;
 }
 

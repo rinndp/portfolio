@@ -5,7 +5,7 @@ import './StyleHome.css';
 
 const HeaderPortfolio = () => {
     return (
-        <div data-aos="zoom-in" id={"home"} className="header-container h-screen flex flex-col items-center justify-center px-10 text-center gap-4">
+        <div data-aos="zoom-in" id={"home"} className="header-container h-screen flex flex-col items-center justify-center px-20 text-center gap-4">
             <div data-aos="fade-right" className="flex flex-row gap-4 justify-center items-center">
                 <img src={reactLogo} className="logo react h-10" alt="react-logo"/>
                 <img src={viteLogo} className="logo vite h-10" alt="vite-logo"/>

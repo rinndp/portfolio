@@ -22,8 +22,8 @@ function App() {
         <Routes>
             <Route path="/"
                     element={
-                       <>
-                       <SideTabBar/>
+                    <>
+                        <SideTabBar/>
                         <HeaderPortfolio/>
                         <AboutMe/>
                         <Projects/>
