@@ -21,12 +21,12 @@ const SideTabBar = () => {
     return (
         <>
             <div data-aos="fade-right"
-                 className={"side-tab-bar justify-center z-20 p-4 sticky content-center w-screen flex flex-row h-14 top-0 gap-20 md:h-screen md:sticky md:grid md:w-14 md:top-0 md:gap-40"}>
+                 className={"side-tab-bar justify-center z-20 p-4 fixed content-center w-screen flex flex-row h-14 top-0 gap-20 md:h-screen md:fixed md:grid md:w-14 md:top-0 md:gap-40"}>
                 {tabs.map(tab => (
                     <button onClick={() => {
                         const section = document.getElementById(tab.id)
                         if (section)
-                            section.scrollIntoView({behavior: "smooth"});
+                            section.scrollIntoView({behavior: "smooth", block: "start"});
                     }}>
                         <img src={tab.src} className={"button text-blue-100"} alt="home-button"/>
                     </button>

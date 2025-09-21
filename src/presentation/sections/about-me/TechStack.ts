@@ -3,13 +3,25 @@ export const techStack = [
         name: "React Native",
     },
     {
-        name: "React",
-    },
-    {
-        name: "Android Studio",
+        name: "TypeScript",
     },
     {
         name: "Expo",
+    },
+    {
+        name: "Django",
+    },
+    {
+        name: "PosgreSQL",
+    },
+    {
+        name: "Python",
+    },
+    {
+        name: "JWT",
+    },
+    {
+        name: "React",
     },
     {
         name: "Vite",
@@ -18,26 +30,13 @@ export const techStack = [
         name: "TailwindCSS",
     },
     {
-        name: "Django",
-    },
-    {
-        name: "TypeScript",
-    },
-    {
-        name: "Python",
-    },
-    {
         name: "Java",
     },
-    {
-        name: "PosgreSQL",
-    },
+
     {
         name: "MySQL",
     },
-    {
-        name: "JWT",
-    },
+
     {
         name: "JSON",
     },

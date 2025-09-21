@@ -8,7 +8,7 @@ const AboutMe = () => {
 
     return(
         <>
-            <div data-aos="zoom-in" id={"about-me"} className={"flex flex-col px-10 text-center gap-4 pt-15 pb-20 md:px-30"}>
+            <div data-aos="zoom-in" id={"about-me"} className={"flex flex-col px-10 text-center gap-4 pt-15 pb-10 md:px-30"}>
                 <h2 className="subtitle">About me</h2>
                 <div className={"flex flex-col md:flex-row justify-center mt-20 gap-7 pb-20 md:ps-10"}>
                     <div className={"flex-1"}>
@@ -34,7 +34,7 @@ const AboutMe = () => {
                         </div>
                     </div>
                     <div className="md:w-1/2">
-                        <h2 data-aos={"fade-left"} className="fs-7 font-bold text-center">Tech stack</h2><br/>
+                        <h2 data-aos={"fade-left"} className="fs-7 font-bold text-left pt-5 md:text-center md:pt-0">Tech stack</h2><br/>
                         <FlatListTech techStack={techStack}/>
                     </div>
                 </div>

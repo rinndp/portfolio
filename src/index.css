@@ -13,10 +13,11 @@
     background-position: center;
     background-attachment: fixed;
     overflow: auto;
+    overflow-x: hidden;
+    overflow-anchor: none;
     color: var(--light-gray);
-    scroll-behavior: smooth;
     --light-purple: #b0abe1;
-    --dark-purple: rgba(20, 7, 26, 0.93);
+    --dark-purple: rgba(15, 7, 35, 0.91);
     --button-color: #2c1634;
     --gray: #858383;
     --white: #ffffff;
@@ -26,6 +27,20 @@
     --bp-md: 768px;
     --bp-lg: 1024px;
 }
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--dark-purple);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #4d1457;
+    border-radius: 6px;
+}
+
 
 .button {
     width: 2rem;

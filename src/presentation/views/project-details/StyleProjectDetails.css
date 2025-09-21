@@ -1,3 +1,11 @@
+@media (max-width: 1100px) {
+    .project-details-info-container {display: grid; justify-items: center; gap:10px}
+}
+
+@media (min-width: 1100px) {
+    .project-text-container {width: 50%;}
+}
+
 .go-back-button{
     background-color: var(--dark-purple);
     border-radius: 12px;

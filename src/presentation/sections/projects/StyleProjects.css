@@ -1,4 +1,4 @@
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     .projects-container {display: block; justify-items: center; gap: 20px}
 }
 
@@ -34,14 +34,16 @@
 }
 
 .details-button {
+    width: 9em;
     border-radius: 13px;
-    background-color: var(--button-color);
+    background: linear-gradient(to right, #212273, #511a52);
     font-size: 0.9em;
     transition: transform 0.5s, filter 0.4s;
 }
 
 .details-button:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
+    cursor: pointer;
     filter: brightness(115%);
     transition: transform 0.5s, filter 0.4s;
 }
