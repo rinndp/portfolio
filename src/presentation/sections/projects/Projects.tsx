@@ -13,7 +13,7 @@ const Projects = () => {
                 <h2 className="subtitle">My projects</h2>
                 <div className="projects-container flex flex-row justify-center gap-8 mt-7">
                     {projects.map((project) => (
-                        <div data-aos={"fade-left"} className={"project-card flex flex-col justify-center gap-3 p-8 my-5"}>
+                        <div data-aos={"fade-left"} className={"project-card flex flex-col gap-3 p-8 my-5"}>
                             <img className={"project-img"} src={project.img} alt={project.name + " photo"}/>
                             <h2 className={"text-left text-xl font-bold mt-3"}>{project.name}</h2>
                             <p className={"description-project text-justify"}>{project.description}</p>
