@@ -3,6 +3,10 @@
     text-transform: uppercase;
 }
 
+.home-container {
+    height: 100dvh;
+}
+
 .techIconsContainer{
     display: flex;
     justify-content: center;

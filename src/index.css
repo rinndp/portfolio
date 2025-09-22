@@ -6,6 +6,8 @@
 }
 
 :root {
+    touch-action: pan-x pan-y;
+    overscroll-behavior: none;
     background-image: url("/src/assets/background-gradient.gif");
     backdrop-filter: blur(1px);
     background-repeat: no-repeat;
