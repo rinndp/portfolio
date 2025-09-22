@@ -1,6 +1,4 @@
 import "./StyleAboutMe.css"
-import github from "../../../assets/github-logo.png"
-import linkdin from "../../../assets/linkdin-logo.png"
 import {FlatListTech} from "../../components/FlatlistTech.tsx";
 import {techStack} from "./TechStack.ts";
 
@@ -8,7 +6,8 @@ const AboutMe = () => {
 
     return(
         <>
-            <div data-aos="zoom-in" id={"about-me"} className={"flex flex-col px-10 text-center gap-4 pt-15 pb-10 md:px-30"}>
+            <p id={"about-me"}></p>
+            <div data-aos="zoom-in" className={"flex flex-col px-10 text-center gap-4 pt-15 pb-10 md:px-30"}>
                 <h2 className="subtitle">About me</h2>
                 <div className={"flex flex-col md:flex-row justify-center mt-20 gap-7 pb-20 md:ps-10"}>
                     <div className={"flex-1"}>
@@ -26,12 +25,6 @@ const AboutMe = () => {
                             I am highly motivated, detail-oriented, and <b>eager to continue learning</b>. In addition
                             to my academic and internship experience, I actively work on personal projects, which you
                             can find on my GitHub</p>
-                        <div className={"flex flex-row mt-4 gap-4"}>
-                            <a href={"https://github.com/rinndp"}><img className={"button"} src={github}
-                                                                       alt={"github-logo"}/></a>
-                            <a href={"https://www.linkedin.com/in/axelrojas3/"}><img className={"button"} src={linkdin}
-                                                                       alt={"linkedin-logo"}/></a>
-                        </div>
                     </div>
                     <div className="md:w-1/2">
                         <h2 data-aos={"fade-left"} className="fs-7 font-bold text-left pt-5 md:text-center md:pt-0">Tech stack</h2><br/>
