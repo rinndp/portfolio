@@ -23,7 +23,9 @@ const SideTabBar = () => {
             <div data-aos="fade-right"
                  className={"side-tab-bar justify-center bottom-0 z-20 fixed content-center w-screen flex flex-row h-14 gap-20 md:h-screen md:fixed md:grid md:w-14 md:top-0 md:gap-40"}>
                 {tabs.map(tab => (
-                    <button onClick={() => {
+                    <button
+                        key={tab.id}
+                        onClick={() => {
                         const section = document.getElementById(tab.id)
                         if (section)
                             section.scrollIntoView({behavior: "smooth", block: "start"});

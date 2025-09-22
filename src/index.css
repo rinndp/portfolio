@@ -8,12 +8,8 @@
 :root {
     touch-action: pan-x pan-y;
     overscroll-behavior: none;
-    background-image: url("/src/assets/background-gradient.gif");
-    backdrop-filter: blur(1px);
-    background-repeat: no-repeat;
+    background: linear-gradient(to bottom, #171031, #2c1634, #171031);
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     overflow: auto;
     overflow-x: hidden;
     overflow-anchor: none;
@@ -21,7 +17,7 @@
     --light-purple: #b0abe1;
     --dark-purple: rgba(15, 7, 35, 0.91);
     --button-color: #2c1634;
-    --gray: #858383;
+    --pink: #612367;
     --white: #ffffff;
     --light-gray: #e0e0e0;
     --text-color: #b6b6b6;
