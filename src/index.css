@@ -5,16 +5,17 @@
     src: url("/src/assets/fonts/frutiger.ttf");
 }
 
-body {
+html, body {
+    width: 100%;
+    margin-bottom: -4000px;
+    background: var(--dark-purple) linear-gradient(to bottom, #171031, #2c1634, #171031);
     overflow-x: hidden;
 }
 
 :root {
-    touch-action: pan-x pan-y;
     overscroll-behavior: none;
-    background: linear-gradient(to bottom, #171031, #2c1634, #171031);
+    overflow-x: hidden;
     background-size: cover;
-    overflow: auto;
     overflow-anchor: none;
     color: var(--light-gray);
     --light-purple: #b0abe1;

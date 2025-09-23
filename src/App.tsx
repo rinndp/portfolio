@@ -1,5 +1,4 @@
 import './App.css'
-import SideTabBar from "./presentation/components/side-tab-bar/SideTabBar.tsx";
 import HeaderPortfolio from "./presentation/sections/home/Home.tsx";
 import AboutMe from "./presentation/sections/about-me/AboutMe.tsx";
 import {useEffect} from "react";
@@ -8,6 +7,7 @@ import 'aos/dist/aos.css';
 import Projects from "./presentation/sections/projects/Projects.tsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ProjectDetails from "./presentation/views/project-details/ProjectDetails.tsx";
+import SideTabBar from "./presentation/components/side-tab-bar/SideTabBar.tsx";
 
 
 function App() {

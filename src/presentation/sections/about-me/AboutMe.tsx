@@ -7,7 +7,7 @@ const AboutMe = () => {
     return(
         <>
             <p id={"about-me"}></p>
-            <div data-aos="zoom-in" className={"flex flex-col px-10 text-center gap-4 pt-15 pb-10 md:px-30"}>
+            <div data-aos="zoom-in" className={"flex flex-col h-auto px-10 text-center gap-4 pt-15 pb-10 md:px-30"}>
                 <h2 className="subtitle">About me</h2>
                 <div className={"flex flex-col md:flex-row justify-center mt-20 gap-7 pb-20 md:ps-10"}>
                     <div className={"flex-1"}>
