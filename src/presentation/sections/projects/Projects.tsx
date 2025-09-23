@@ -9,7 +9,7 @@ const Projects = () => {
         <>
             <p className={"mt-30"} id={"projects"}></p>
             <div data-aos="zoom-in"
-                 className={"flex flex-col text-center justify-center items-center gap-4 pt-10 md:pt-5 md:px-30 pb-24"}>
+                 className={"flex flex-col h-auto text-center justify-center items-center gap-4 pt-10 md:pt-5 md:px-30 pb-24"}>
                 <h2 className="subtitle">My projects</h2>
                 <div className="projects-container md:flex md:flex-row justify-center items-center gap-8 mt-7">
                     {projects.map((project) => (
