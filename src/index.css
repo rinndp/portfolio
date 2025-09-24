@@ -5,6 +5,7 @@
     src: url("/src/assets/fonts/frutiger.ttf");
 }
 
+
 html, body {
     width: 100%;
     margin-bottom: -4000px;
@@ -45,7 +46,6 @@ body::-webkit-scrollbar-thumb {
 
 
 .button {
-    width: 2rem;
     filter: invert(1);
     transition: filter 0.3s ease-in-out, transform 0.4s ease;
 }

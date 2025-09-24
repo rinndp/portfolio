@@ -2,16 +2,28 @@
     .projects-container {display: block; gap: 10px; align-items: center}
 }
 
+@media (hover: hover) and (pointer: fine) {
+    .project-card:hover {
+        filter: drop-shadow(0 0 0.2em var(--pink));
+        transition: filter 0.4s;
+    }
+    .project-card:hover img {
+        transform: scale(1.05);
+        transition: transform 0.5s;
+    }
+    .details-button:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+        filter: brightness(115%);
+        transition: transform 0.4s, filter 0.4s;
+    }
+}
+
 .project-card {
     background-color: var(--dark-purple);
     width: 30%;
     min-width: 290px;
     border-radius: 17px;
-}
-
-.project-card:hover {
-    filter: drop-shadow(0 0 0.2em var(--pink));
-    transition: filter 0.4s;
 }
 
 .project-card img {
@@ -20,11 +32,6 @@
     border-radius: 17px;
     display: block;
     height: auto;
-}
-
-.project-card:hover img {
-    transform: scale(1.05);
-    transition: transform 0.5s;
 }
 
 .description-project {
@@ -38,12 +45,6 @@
     border-radius: 13px;
     background: linear-gradient(to right, #212273, #511a52);
     font-size: 0.9em;
-    transition: transform 0.5s, filter 0.4s;
+    transition: transform 0.4s, filter 0.4s;
 }
 
-.details-button:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-    filter: brightness(115%);
-    transition: transform 0.5s, filter 0.4s;
-}

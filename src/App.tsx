@@ -1,5 +1,5 @@
 import './App.css'
-import HeaderPortfolio from "./presentation/sections/home/Home.tsx";
+import Home from "./presentation/sections/home/Home.tsx";
 import AboutMe from "./presentation/sections/about-me/AboutMe.tsx";
 import {useEffect} from "react";
 import AOS from "aos";
@@ -8,6 +8,7 @@ import Projects from "./presentation/sections/projects/Projects.tsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ProjectDetails from "./presentation/views/project-details/ProjectDetails.tsx";
 import SideTabBar from "./presentation/components/side-tab-bar/SideTabBar.tsx";
+import Contact from "./presentation/sections/contact/Contact.tsx";
 
 
 function App() {
@@ -24,9 +25,10 @@ function App() {
                     element={
                     <>
                         <SideTabBar/>
-                        <HeaderPortfolio/>
+                        <Home/>
                         <AboutMe/>
                         <Projects/>
+                        <Contact/>
                     </>
                    }/>
             <Route path={"/projects/:slug"} element={<ProjectDetails/>}/>

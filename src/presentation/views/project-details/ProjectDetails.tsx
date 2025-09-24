@@ -11,7 +11,7 @@ const ProjectDetails = () => {
 
     return (
         <>
-            <div className={"pt-20 px-10 pb-30 md:px-40"}>
+            <div className={"pt-10 md:pt-20 md:h-screen px-10 pb-30 md:px-40"}>
                 <div data-aos={"fade-right"} className={"flex flex-row gap-3"}>
                     <button
                         onClick={() => {
@@ -21,7 +21,7 @@ const ProjectDetails = () => {
                         <img className={"button-arrow ms-3"} src={leftArrow} alt="left-arrow"/>
                         Go back
                     </button>
-                    <div className={"header-text-container flex flex-row gap-3 ms-5"}>
+                    <div className={"header-text-container flex flex-row gap-3 ms-2"}>
                         <p data-aos="fade-up">Projects</p>
                         <img className={"button-arrow"} src={rightArrow} alt="right-arrow"/>
                         <p data-aos="fade-down" className={"text-white brightness-150 font-bold"}>{project.name}</p>
@@ -38,7 +38,7 @@ const ProjectDetails = () => {
                             <FlatListTech techStack={project.technologies}/>
                         </div>
                     </div>
-                    <div data-aos={"fade-up"} className={"mt-10"}>
+                    <div data-aos={"fade-up"} className={"mt-25 md:mt:10"}>
                         <img className={"project-details-img"} src={project.img} alt="project-photo"/>
                     </div>
                 </div>

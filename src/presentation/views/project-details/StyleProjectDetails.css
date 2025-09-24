@@ -9,6 +9,7 @@
 .go-back-button{
     background-color: var(--dark-purple);
     border-radius: 12px;
+    font-size: 0.8rem;
     transition: filter 0.4s;
 }
 
@@ -32,6 +33,7 @@
 
 .header-text-container {
     align-items: center;
+    font-size: 0.9rem;
     filter: opacity(80%);
     img {
         width: 1.0em;

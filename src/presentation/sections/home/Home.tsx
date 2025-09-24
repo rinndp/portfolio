@@ -6,7 +6,7 @@ import file from "../../../assets/file.png";
 import github from "../../../assets/github-logo.png";
 import linkdin from "../../../assets/linkdin-logo.png";
 
-const HeaderPortfolio = () => {
+const Home = () => {
 
     const handleCVDownload = () => {
         const link = document.createElement("a");
@@ -17,9 +17,9 @@ const HeaderPortfolio = () => {
 
     return (
         <>
-            <p id={"home"}></p>
-            <div data-aos="zoom-in-up"
-                 className="home-container flex flex-col items-center justify-center px-20 text-center gap-4">
+            <p id={"home"} className={"mb-3"}>a</p>
+            <div data-aos="zoom-in"
+                 className="home-container md:mt-0 flex flex-col items-center justify-center px-20 text-center gap-4">
                 <div data-aos="fade-right" className="flex flex-row gap-4 justify-center items-center">
                     <img src={reactLogo} className="logo react h-10" alt="react-logo"/>
                     <img src={viteLogo} className="logo vite h-10" alt="vite-logo"/>
@@ -32,15 +32,17 @@ const HeaderPortfolio = () => {
                     <span className="text-green-100"> Django</span>. <br/>I’m looking for new opportunities to keep
                     growing.
                 </p>
-                <button data-aos="fade-left" className={"download-cv-button flex flex-row justify-center p-3 gap-2"}
-                        onClick={handleCVDownload}>
-                    <img src={file} alt={"file-logo"} className={"download-cv-logo"}/>
-                    <p className={""}>Download CV</p>
-                </button>
+                <div>
+                    <button className={"download-cv-button shadow-2xl flex flex-row justify-center p-3 gap-2"}
+                            onClick={handleCVDownload}>
+                        <img src={file} alt={"file-logo"} className={"download-cv-logo"}/>
+                        <p className={""}>Download CV</p>
+                    </button>
+                </div>
                 <div className={"flex flex-row mt-2 gap-4"}>
-                    <a href={"https://github.com/rinndp"}><img className={"button"} src={github}
+                    <a href={"https://github.com/rinndp"}><img className={"button shadow-2xl w-10"} src={github}
                                                                alt={"github-logo"}/></a>
-                    <a href={"https://www.linkedin.com/in/axelrojas3/"}><img className={"button"} src={linkdin}
+                    <a href={"https://www.linkedin.com/in/axelrojas3/"}><img className={"button shadow-2xl w-10"} src={linkdin}
                                                                              alt={"linkedin-logo"}/></a>
                 </div>
             </div>
@@ -48,4 +50,4 @@ const HeaderPortfolio = () => {
     )
 }
 
-export default HeaderPortfolio;
+export default Home;

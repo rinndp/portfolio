@@ -12,6 +12,9 @@ const projects = [
                 name: "React Native"
             },
             {
+                name: "TypeScript"
+            },
+            {
                 name: "Expo"
             },
             {
@@ -19,6 +22,9 @@ const projects = [
             },
             {
                 name: "Django"
+            },
+            {
+                name: "Python"
             },
             {
                 name: "PosgreSQL"
@@ -56,6 +62,9 @@ const projects = [
                 name: "React Native"
             },
             {
+                name: "TypeScript"
+            },
+            {
                 name: "Expo"
             },
             {
@@ -63,6 +72,9 @@ const projects = [
             },
             {
                 name: "Django"
+            },
+            {
+                name: "Python"
             },
             {
                 name: "PosgreSQL"

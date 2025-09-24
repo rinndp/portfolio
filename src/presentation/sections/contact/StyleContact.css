@@ -1,0 +1,8 @@
+.contact-image {
+    filter: invert(1);
+}
+
+.contact-name {
+    color: var(--light-purple);
+    font-weight: bold;
+}
