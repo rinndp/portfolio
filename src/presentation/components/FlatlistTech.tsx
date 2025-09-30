@@ -7,7 +7,7 @@ interface Props {
 
 export const FlatListTech = ({techStack}: Props) => {
     return (
-        <div className="flex flex-wrap gap-3 h-20">
+        <div className="flex flex-wrap gap-3 h-auto">
             {techStack.map((tech, index) => (
                 <div data-aos={"fade-left"}
                      key={index}

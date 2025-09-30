@@ -4,10 +4,15 @@ import rightArrow from "../../../assets/right-arrow.png"
 import "./StyleProjectDetails.css"
 import "../../../assets/tailwind-logo.png"
 import {FlatListTech} from "../../components/FlatlistTech.tsx";
+import {useEffect} from "react";
 
 const ProjectDetails = () => {
     const { state: project } = useLocation();
     const navigate = useNavigate();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    })
 
     return (
         <>
