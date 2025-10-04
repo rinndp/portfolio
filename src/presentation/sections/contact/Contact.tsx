@@ -11,7 +11,7 @@ const Contact = () => {
         },
         {
             name: "Location",
-            value: "Spain, Madrid",
+            value: "Madrid, Spain",
             image: locationLogo,
         }
     ]
@@ -22,11 +22,8 @@ const Contact = () => {
                 <h2 className="subtitle">Contact</h2>
                 <div className={"contact-info-container flex flex-col justify-center gap-15 mt-15"}>
                     <div className={""}>
-                        <p className={"text"}>I am always open to new opportunities where I can contribute and add
-                            value. If
-                            you think my profile matches what you're looking for, please don't hesitate to get in touch.
-                            I'd
-                            be glad to connect with you!</p>
+                        <p className={"text"}>Always interested in new challenges where I can deliver value. If, after reviewing my profile, you find that my qualifications align with your organization's goals and the specific requirements of the role, I would be very pleased to connect.
+                        </p>
                         <div className={"flex flex-col mt-10 gap-7"}>
                         {contactInfo.map((contact) => (
                             <div className={"flex flex-row gap-5"}>

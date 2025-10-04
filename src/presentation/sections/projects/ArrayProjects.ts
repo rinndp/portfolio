@@ -1,10 +1,12 @@
 import img from "../../../assets/foto.jpeg";
+import wimmCover from "../../../assets/wimm-cover.png";
+import gamingSwipeCover from "../../../assets/gaming-swipe-cover.png";
 
 const projects = [
     {
         name: "Wimm",
         slug: "wimm",
-        img: img,
+        img: wimmCover,
         description: "Managing your debtors and creditors has never been so easy.",
         long_description: "Wimm (Where Is My Money), a cross-platform mobile app (iOS and Android) designed to easily manage debtors and creditors: what people owe you and what you owe. The idea is to simplify as much as possible the control of that information we usually keep in notes, papers, or just in our heads.",
         technologies: [
@@ -54,7 +56,7 @@ const projects = [
     {
         name: "GamingSwipe",
         slug: "gaming-swipe",
-        img: img,
+        img: gamingSwipeCover,
         description: "Discover new games through swipes, manage your game library and see other people's libraries",
         long_description: "GamingSwipe is a cross-platform and innovative application designed to make discovering videogames easier and more dynamic for users. Through a swipe-based system, it allows users to expand their wishlist in a much smoother way.",
         technologies: [
