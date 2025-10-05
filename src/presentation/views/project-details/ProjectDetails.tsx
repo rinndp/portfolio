@@ -5,6 +5,7 @@ import "./StyleProjectDetails.css"
 import "../../../assets/tailwind-logo.png"
 import {FlatListTech} from "../../components/FlatlistTech.tsx";
 import {useEffect} from "react";
+import type {Url} from "../../../domain/interfaces/Url.ts";
 
 const ProjectDetails = () => {
     const { state: project } = useLocation();
@@ -38,6 +39,20 @@ const ProjectDetails = () => {
                         <p className={"text mt-7 pe-10"}>{project.description}</p>
                         {project.long_description && (
                             <p className={"text mt-7"}>{project.long_description}</p>
+                        )}
+                        {project.urls && (
+                            <>
+                                <p className={"my-4"}>Links</p>
+                                <div className={"flex flex-col gap-3"}>
+                                {project.urls.map((url: Url, index: number) => (
+                                        <a  className={"project-url"}
+                                            href={url.url}
+                                            key={index}>
+                                            {url.url}
+                                        </a>
+                                    ))}
+                                </div>
+                            </>
                         )}
                         <div className={"py-10"}>
                             <FlatListTech techStack={project.technologies}/>

@@ -29,6 +29,8 @@
 .project-card img {
     transition: transform 0.5s;
     min-width: 200px;
+    max-height: 250px;
+    object-fit: contain;
     border-radius: 17px;
     display: block;
     height: auto;

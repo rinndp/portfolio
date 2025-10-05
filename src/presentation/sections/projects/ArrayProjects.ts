@@ -1,8 +1,9 @@
-import img from "../../../assets/foto.jpeg";
 import wimmCover from "../../../assets/wimm-cover.png";
 import gamingSwipeCover from "../../../assets/gaming-swipe-cover.png";
+import calculatorCover from "../../../assets/calculator-cover.png";
+import type {Project} from "../../../domain/interfaces/Project.ts";
 
-const projects = [
+const projects: Project[] = [
     {
         name: "Wimm",
         slug: "wimm",
@@ -44,12 +45,15 @@ const projects = [
                 name: "Figma"
             }
         ],
-        github_urls: [
+        urls: [
             {
                 url: "https://github.com/rinndp/wimm-frontend",
             },
             {
                 url: "https://github.com/rinndp/wimm-backend",
+            },
+            {
+                url: "https://www.linkedin.com/posts/axelrojas3_nuevo-proyecto-personal-quiero-activity-7373688873517744128-z_29",
             }
         ]
     },
@@ -96,12 +100,20 @@ const projects = [
             {
                 name: "Figma"
             }
+        ],
+        urls: [
+            {
+                url: "https://github.com/mega025/epsum-react-gaming-swipe",
+            },
+            {
+                url: "https://github.com/rinndp/gaming-swipe-backend",
+            },
         ]
     },
     {
         name: "Calculator",
         slug: "calculator",
-        img: img,
+        img: calculatorCover,
         description: "Basic calculator made with Android Studio",
         technologies: [
             {
@@ -109,6 +121,11 @@ const projects = [
             },
             {
                 name: "Java"
+            }
+        ],
+        urls: [
+            {
+                url: "https://github.com/rinndp/epsum-pmdm-calculator"
             }
         ]
     },

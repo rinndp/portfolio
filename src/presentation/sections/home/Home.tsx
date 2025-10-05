@@ -17,7 +17,7 @@ const Home = () => {
 
     return (
         <>
-            <p id={"home"} className={"mb-3"}>a</p>
+            <p id={"home"} className={"mb-3"}>-</p>
             <div data-aos="zoom-in"
                  className="home-container md:mt-0 flex flex-col items-center justify-center px-20 text-center gap-4">
                 <div data-aos="fade-right" className="flex flex-row gap-4 justify-center items-center">
