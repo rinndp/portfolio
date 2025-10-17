@@ -42,13 +42,13 @@ const ProjectDetails = () => {
                         )}
                         {project.urls && (
                             <>
-                                <p className={"my-4"}>Links</p>
+                                <p className={"my-4"}>Sources</p>
                                 <div className={"flex flex-col gap-3"}>
                                 {project.urls.map((url: Url, index: number) => (
                                         <a  className={"project-url"}
                                             href={url.url}
                                             key={index}>
-                                            {url.url}
+                                            {url.label}
                                         </a>
                                     ))}
                                 </div>

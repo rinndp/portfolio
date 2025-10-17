@@ -7,7 +7,7 @@ const Projects = () => {
 
     return (
         <>
-            <p className={"mb-20 md:mb-25"} id={"projects"}></p>
+            <p className={"mb-20 md:mb-10"} id={"projects"}></p>
             <div data-aos="zoom-in"
                  className={"flex flex-col h-auto text-center justify-center items-center gap-4 md:pt-5 md:px-30 pb-24"}>
                 <h2 className="subtitle">My projects</h2>

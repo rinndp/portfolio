@@ -47,12 +47,15 @@ const projects: Project[] = [
         ],
         urls: [
             {
+                label: "View frontend code",
                 url: "https://github.com/rinndp/wimm-frontend",
             },
             {
+                label: "View backend code",
                 url: "https://github.com/rinndp/wimm-backend",
             },
             {
+                label: "View linkedIn post",
                 url: "https://www.linkedin.com/posts/axelrojas3_nuevo-proyecto-personal-quiero-activity-7373688873517744128-z_29",
             }
         ]
@@ -103,9 +106,11 @@ const projects: Project[] = [
         ],
         urls: [
             {
+                label: "View frontend code",
                 url: "https://github.com/mega025/epsum-react-gaming-swipe",
             },
             {
+                label: "View backend code",
                 url: "https://github.com/rinndp/gaming-swipe-backend",
             },
         ]
@@ -114,7 +119,8 @@ const projects: Project[] = [
         name: "Calculator",
         slug: "calculator",
         img: calculatorCover,
-        description: "Basic calculator made with Android Studio",
+        description: "Modern calculator designed for simplicity and style.",
+        long_description: "With its minimalist dark interface and smooth rounded buttons, it offers an elegant experience for everyday calculations. The app supports parentheses and basic operations such as addition, subtraction, multiplication, and division, showing instant results as you type. A clear “C” button lets you reset easily, and the layout is fully optimized for both small and large screens, making it perfect for users who enjoy a clean, refined design without sacrificing functionality.",
         technologies: [
             {
                 name: "Android Studio"
@@ -125,6 +131,7 @@ const projects: Project[] = [
         ],
         urls: [
             {
+                label: "View code",
                 url: "https://github.com/rinndp/epsum-pmdm-calculator"
             }
         ]

@@ -26,7 +26,7 @@ const SideTabBar = () => {
     return (
         <>
             <div data-aos="fade-right"
-                 className={"side-tab-bar justify-center z-20 fixed content-center w-screen flex flex-row h-14 gap-20 md:h-screen md:grid md:w-14 md:top-0 md:gap-40"}>
+                 className={"side-tab-bar justify-center z-20 fixed content-center w-screen flex flex-row h-14 gap-20"}>
                 {tabs.map(tab => (
                     <button
                         key={tab.id}

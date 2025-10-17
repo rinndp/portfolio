@@ -1,3 +1,13 @@
+@media (min-width: 768px) and (min-height: 680px) {
+    .side-tab-bar {
+        height: 100dvh;
+        display: grid;
+        width: 3em;
+        top: 0;
+        gap: 10em
+    }
+}
+
 .side-tab-bar {
     top: 0;
     background-color: var(--dark-purple);
