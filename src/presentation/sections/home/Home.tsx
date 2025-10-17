@@ -25,7 +25,7 @@ const Home = () => {
                     <img src={viteLogo} className="logo vite h-10" alt="vite-logo"/>
                     <img src={tailwindLogo} className="logo react h-7 mt-1" alt="tailwind-logo"/>
                 </div>
-                <h1 data-aos="fade-left" className="title text-7xl font-bold">HI! I'M <span
+                <h1 data-aos="fade-left" className="title md:text-7xl text-6xl font-bold">HI! I'M <span
                     className={"name"}>Axel Rojas</span></h1>
                 <p data-aos="fade-right" className="description max-w-2xl">
                     Junior Mobile App Developer specialized in <span className="text-blue-200">React Native</span> and
