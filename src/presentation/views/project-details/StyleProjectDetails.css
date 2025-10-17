@@ -52,5 +52,13 @@
 .project-url {
     color: #d1adf8;
     text-decoration: underline;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.source-button {
+    width: 15em;
+    border-radius: 13px;
+    background: linear-gradient(to right, #212273, #511a52);
+    font-size: 0.9em;
+    transition: transform 0.4s, filter 0.4s;
 }

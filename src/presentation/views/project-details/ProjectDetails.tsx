@@ -17,7 +17,7 @@ const ProjectDetails = () => {
 
     return (
         <>
-            <div className={"pt-10 md:pt-20 md:h-screen px-10 pb-30 md:px-40"}>
+            <div className={"pt-10 md:pt-10 md:h-screen px-10 pb-30 md:px-40"}>
                 <div data-aos={"fade-right"} className={"flex flex-row gap-3"}>
                     <button
                         onClick={() => {
@@ -45,7 +45,7 @@ const ProjectDetails = () => {
                                 <p className={"my-4"}>Sources</p>
                                 <div className={"flex flex-col gap-3"}>
                                 {project.urls.map((url: Url, index: number) => (
-                                        <a  className={"project-url"}
+                                        <a className={"project-url"}
                                             href={url.url}
                                             key={index}>
                                             {url.label}
@@ -66,5 +66,6 @@ const ProjectDetails = () => {
         </>
     )
 }
+
 
 export default ProjectDetails;
