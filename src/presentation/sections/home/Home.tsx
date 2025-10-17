@@ -23,7 +23,7 @@ const Home = () => {
                 <div data-aos="fade-right" className="flex flex-row gap-4 justify-center items-center">
                     <img src={reactLogo} className="logo react h-10" alt="react-logo"/>
                     <img src={viteLogo} className="logo vite h-10" alt="vite-logo"/>
-                    <img src={tailwindLogo} className="logo tailwind h-7 mt-1" alt="tailwind-logo"/>
+                    <img src={tailwindLogo} className="logo react h-7 mt-1" alt="tailwind-logo"/>
                 </div>
                 <h1 data-aos="fade-left" className="title text-7xl font-bold">HI! I'M <span
                     className={"name"}>Axel Rojas</span></h1>
