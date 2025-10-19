@@ -3,6 +3,6 @@
     { "src": "/", "dest": "/" },
     { "src": "/projects/wimm", "dest": "/" },
     { "src": "/projects/calculator", "dest": "/" },
-    { "src": "/projects/gaming-swipe", "dest": "/" },
+    { "src": "/projects/gaming-swipe", "dest": "/" }
   ]
 }
