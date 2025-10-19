@@ -46,6 +46,7 @@ const ProjectDetails = () => {
                                 <div className={"flex flex-col gap-3"}>
                                 {project.urls.map((url: Url, index: number) => (
                                         <a className={"project-url"}
+                                           target="_blank" rel="noopener noreferrer"
                                             href={url.url}
                                             key={index}>
                                             {url.label}
