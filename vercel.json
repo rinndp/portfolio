@@ -1,8 +1,3 @@
 {
-  "routes": [
-    { "src": "/", "dest": "/" },
-    { "src": "/projects/wimm", "dest": "/" },
-    { "src": "/projects/calculator", "dest": "/" },
-    { "src": "/projects/gaming-swipe", "dest": "/" }
-  ]
+  "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }]
 }
