@@ -50,7 +50,7 @@ const Contact = () => {
                             <input data-aos="fade-left" type="text" name="name" placeholder={"Your name"} required/>
                             <input data-aos="fade-left" type="email" name="email" placeholder={"Your email"} required/>
                             <textarea data-aos="fade-left" className={"h-40"} name="message" placeholder={"Your message"} required/>
-                            <button data-aos="fade-left" className={"details-button h-10 justify-center"} type="submit">Send</button>
+                            <button className={"details-button h-10 justify-center"} type="submit">Send</button>
                         </form>
                     </div>
                 </div>
