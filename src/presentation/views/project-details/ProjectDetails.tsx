@@ -55,7 +55,7 @@ const ProjectDetails = () => {
                             </>
                         )}
                         <div className={"py-10"}>
-                            <FlatListTech techStack={project.technologies}/>
+                            <FlatListTech techStack={project.technologies} animation={false}/>
                         </div>
                     </div>
                     <div data-aos={"fade-up"} className={"mt-25 md:mt:10"}>

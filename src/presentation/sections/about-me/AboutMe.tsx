@@ -28,7 +28,7 @@ const AboutMe = () => {
                     </div>
                     <div className="md:w-1/2">
                         <h2 data-aos={"fade-left"} className="fs-7 font-bold text-left pt-5 md:text-center md:pt-0">Tech stack</h2><br/>
-                        <FlatListTech techStack={techStack}/>
+                        <FlatListTech techStack={techStack} animation={true}/>
                     </div>
                 </div>
             </div>
