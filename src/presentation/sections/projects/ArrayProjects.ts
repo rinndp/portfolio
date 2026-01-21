@@ -107,7 +107,7 @@ const projects: Project[] = [
         urls: [
             {
                 label: "View frontend code",
-                url: "https://github.com/mega025/epsum-react-gaming-swipe",
+                url: "https://github.com/rinndp/gaming-swipe-frontend",
             },
             {
                 label: "View backend code",
