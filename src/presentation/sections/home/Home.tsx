@@ -10,7 +10,7 @@ const Home = () => {
 
     const handleCVDownload = () => {
         const link = document.createElement("a");
-        link.href = "../../../public/cv-axel-rojas-en-s.pdf";
+        link.href = "/cv-axel-rojas-en-s.pdf";
         link.download = "cv-axel-rojas-en-s.pdf";
         link.click();
     }
