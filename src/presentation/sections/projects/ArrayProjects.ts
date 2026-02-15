@@ -1,5 +1,5 @@
 import wimmCover from "../../../assets/wimm-cover.png";
-import gamingSwipeCover from "../../../assets/gaming-swipe-cover.png";
+import gamingSwipeCover from "../../../assets/gaming-swipe-cover.jpg";
 import calculatorCover from "../../../assets/calculator-cover.png";
 import type {Project} from "../../../domain/interfaces/Project.ts";
 
