@@ -9,6 +9,9 @@ export const techStack = [
         name: "Expo",
     },
     {
+        name: "EAS",
+    },
+    {
         name: "Django",
     },
     {
@@ -47,10 +50,22 @@ export const techStack = [
         name: "GitHub",
     },
     {
+        name: "Cursor",
+    },
+    {
+        name: "Vercel",
+    },
+    {
+        name: "Render",
+    },
+    {
         name: "Postman",
     },
     {
         name: "Figma",
+    },
+    {
+        name: "Jira",
     },
 
 ]

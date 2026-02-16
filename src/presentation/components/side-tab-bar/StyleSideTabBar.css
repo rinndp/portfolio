@@ -13,3 +13,11 @@
     background-color: var(--dark-purple);
     box-shadow: 0 0 11px var(--pink);
 }
+
+.button {
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.15);
+}

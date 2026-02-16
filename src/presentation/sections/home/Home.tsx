@@ -28,9 +28,9 @@ const Home = () => {
                 <h1 data-aos="fade-left" className="title md:text-7xl text-6xl font-bold">HI! I'M <span
                     className={"name"}>Axel Rojas</span></h1>
                 <p data-aos="fade-right" className="description max-w-2xl">
-                    Junior Mobile App Developer specialized in <span className="text-blue-200">React Native</span> and
-                    <span className="text-green-100"> Django</span>. <br/>I’m looking for new opportunities to keep
-                    growing.
+                    Software Engineer specialized in <span className="text-blue-200">React Native</span> and
+                    <span className="text-green-100"> Django</span>. <br/><b><small>I’m looking for new opportunities to keep
+                    growing.</small></b><br/>
                 </p>
                 <div>
                     <button className={"download-cv-button shadow-2xl flex flex-row justify-center p-3 gap-2"}
