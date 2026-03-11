@@ -107,12 +107,12 @@ const projects: Project[] = [
         ],
         urls: [
             {
-                label: "View frontend code",
-                url: "https://github.com/rinndp/gaming-swipe-frontend",
+                label: "View linkedIn post",
+                url: "https://www.linkedin.com/posts/axelrojas3_despu%C3%A9s-de-hacer-un-prototipo-base-para-activity-7436027475278807040-bH-r?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEkCElIBq2F0IG6nb31WOGTAZ2ddZa1P1y4",
             },
             {
-                label: "View backend code",
-                url: "https://github.com/rinndp/gaming-swipe-backend",
+                label: "Download it from Google Play Store!",
+                url: "https://play.google.com/store/apps/details?id=com.rinndp.gamingswipe",
             },
         ]
     },

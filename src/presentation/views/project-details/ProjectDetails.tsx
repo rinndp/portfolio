@@ -17,7 +17,7 @@ const ProjectDetails = () => {
 
     return (
         <>
-            <div className={"pt-10 md:pt-10 md:h-screen px-10 pb-30 md:px-40"}>
+            <div className={"pb-30 pt-10 md:pt-10 md:min-h-screen px-10 md:px-40"}>
                 <div data-aos={"fade-right"} className={"flex flex-row gap-3"}>
                     <button
                         onClick={() => {

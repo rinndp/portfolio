@@ -1,5 +1,5 @@
 @media (max-width: 1100px) {
-    .project-details-info-container {display: grid; justify-items: center; gap:10px}
+    .project-details-info-container {display: grid; justify-items: center; gap:0px; margin-bottom: 100px;}
 }
 
 @media (min-width: 1100px) {
