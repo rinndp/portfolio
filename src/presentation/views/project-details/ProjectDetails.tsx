@@ -59,7 +59,7 @@ const ProjectDetails = () => {
                         </div>
                     </div>
                     <div data-aos={"fade-up"} className={"mt-25 md:mt:10"}>
-                        <img className={"project-details-img"} src={project.img} alt="project-photo"/>
+                        <img className={"project-details-img hover:scale-[1.05] duration-500"} src={project.img} alt="project-photo"/>
                     </div>
                 </div>
             </div>

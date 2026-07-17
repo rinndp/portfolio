@@ -13,17 +13,19 @@ const Projects = () => {
                 <h2 className="subtitle">My projects</h2>
                 <div className="projects-container md:flex md:flex-row justify-center items-center gap-8 mt-7">
                     {projects.map((project) => (
-                        <div data-aos={"fade-left"} className={"project-card shadow-2xl mx-auto flex flex-col gap-3 p-8 my-5"}>
-                            <img className={"project-img"} src={project.img} alt={project.name + " photo"}/>
-                            <h2 className={"text-left text-xl font-bold mt-3"}>{project.name}</h2>
-                            <p className={"description-project text-justify"}>{project.description}</p>
-                            <div data-aos="fade-left" className={"text-left"}>
-                                <button key={project.slug}
-                                        onClick={() => {
-                                            navigate(`/projects/${project.slug}`, {state: project})
-                                        }}
-                                        className={"details-button p-2"}>More details →
-                                </button>
+                        <div data-aos={"fade-left"} className={"project-card-wrapper mx-auto my-5"}>
+                            <div className={"project-card shadow-2xl flex flex-col gap-3 p-8"}>
+                                <img className={"project-img"} src={project.img} alt={project.name + " photo"}/>
+                                <h2 className={"text-left text-xl font-bold mt-3"}>{project.name}</h2>
+                                <p className={"description-project text-justify"}>{project.description}</p>
+                                <div className={"text-left"}>
+                                    <button key={project.slug}
+                                            onClick={() => {
+                                                navigate(`/projects/${project.slug}`, {state: project})
+                                            }}
+                                            className={"details-button p-2"}>More details →
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     ))}

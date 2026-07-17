@@ -1,16 +1,23 @@
 @media (max-width: 1100px) {
-    .projects-container {display: block; gap: 10px; align-items: center}
+    .projects-container {
+        display: block;
+        gap: 10px;
+        align-items: center
+    }
 }
 
 @media (hover: hover) and (pointer: fine) {
     .project-card:hover {
         filter: drop-shadow(0 0 0.2em var(--pink));
-        transition: filter 0.4s;
+        transform: scale(1.05);
+        transition: filter 0.4s, transform 0.5s;
     }
+
     .project-card:hover img {
         transform: scale(1.05);
         transition: transform 0.5s;
     }
+
     .details-button:hover {
         transform: scale(1.1);
         cursor: pointer;
@@ -19,11 +26,16 @@
     }
 }
 
-.project-card {
-    background-color: var(--dark-purple);
+.project-card-wrapper {
     width: 30%;
     min-width: 290px;
+}
+
+.project-card {
+    background-color: var(--dark-purple);
+    width: 100%;
     border-radius: 17px;
+    transition: transform 0.5s, filter 0.4s;
 }
 
 .project-card img {
@@ -49,4 +61,3 @@
     font-size: 0.9em;
     transition: transform 0.4s, filter 0.4s;
 }
-

@@ -19,6 +19,7 @@ html, body {
     overflow-anchor: none;
     color: var(--light-gray);
     --light-purple: #b0abe1;
+    --purple: #5349ab;
     --dark-purple: rgba(15, 7, 35, 0.91);
     --button-color: #2c1634;
     --pink: #612367;
@@ -60,7 +61,7 @@ body::-webkit-scrollbar-thumb {
     font-family: "Frutiger", sans-serif;
     letter-spacing: 5px;
     text-transform: uppercase;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     position: relative;    /* necesario para que ::after se posicione relativo a cada h2 */
     display: inline-block;
 }
@@ -71,10 +72,18 @@ body::-webkit-scrollbar-thumb {
     left: 50%;
     bottom: -5px;
     transform: translateX(-50%);
-    width: 40px;
+    width: 120px;
     height: 6px;
-    background-color: var(--light-purple);
-    border-radius: 40%;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--purple), var(--light-purple), var(--purple));
+    background-size: 220% 100%;
+    animation: barFlow 6s ease-in-out infinite;
+}
+
+@keyframes barFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .text {
