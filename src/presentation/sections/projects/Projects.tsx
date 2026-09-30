@@ -15,7 +15,7 @@ const Projects = () => {
                     {projects.map((project) => (
                         <div data-aos={"fade-left"} className={"project-card-wrapper mx-auto my-5"}>
                             <div className={"project-card shadow-2xl flex flex-col gap-3 p-8"}>
-                                <img className={"project-img"} src={project.img} alt={project.name + " photo"}/>
+                                <img className={"project-img"} src={project.img} alt={project.name + " photo"} loading="lazy" decoding="async"/>
                                 <h2 className={"text-left text-xl font-bold mt-3"}>{project.name}</h2>
                                 <p className={"description-project text-justify"}>{project.description}</p>
                                 <div className={"text-left"}>

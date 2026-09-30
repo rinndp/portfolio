@@ -101,6 +101,24 @@
     to { background-position: 0 64px; }
 }
 
+/* Mobile GPUs choke on huge blurred + blended layers and per-frame grid repaints:
+   fake the glow with a radial gradient and keep the grid still */
+@media (max-width: 767px) {
+    .site-bg-grid {
+        animation: none;
+    }
+
+    .site-bg-orb {
+        filter: none;
+        mix-blend-mode: normal;
+        background: radial-gradient(circle, var(--orb) 0%, transparent 70%);
+    }
+
+    .site-bg-orb--1 { --orb: var(--purple); }
+    .site-bg-orb--2 { --orb: var(--pink); }
+    .site-bg-orb--3 { --orb: var(--light-purple); }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .site-bg-grid,
     .site-bg-orb {

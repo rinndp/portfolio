@@ -1,6 +1,6 @@
-import wimmCover from "../../../assets/wimm-cover.png";
-import gamingSwipeCover from "../../../assets/gaming-swipe-cover.png";
-import helmiCover from "../../../assets/helmiheikkinen-cover.png";
+import wimmCover from "../../../assets/wimm-cover.webp";
+import gamingSwipeCover from "../../../assets/gaming-swipe-cover.webp";
+import helmiCover from "../../../assets/helmiheikkinen-cover.webp";
 import type { Project } from "../../../domain/interfaces/Project.ts";
 
 

@@ -58,6 +58,13 @@
     flex-shrink: 0;
 }
 
+/* One backdrop-filter per chip adds up fast on mobile GPUs */
+@media (max-width: 767px) {
+    .tech-chip {
+        backdrop-filter: none;
+    }
+}
+
 @media (hover: hover) and (pointer: fine) {
     .tech-chip:hover {
         translate: 0 -2px;

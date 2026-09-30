@@ -1,9 +1,9 @@
 import reactLogo from "../../../assets/react.svg";
-import viteLogo from "../../../assets/vitejs-logo.png";
+import viteLogo from "../../../assets/vitejs-logo.webp";
 import tailwindLogo from "../../../assets/tailwind-logo.png";
 import './StyleHome.css';
 import file from "../../../assets/file.png";
-import github from "../../../assets/github-logo.png";
+import github from "../../../assets/github-logo.webp";
 import linkdin from "../../../assets/linkdin-logo.png";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 

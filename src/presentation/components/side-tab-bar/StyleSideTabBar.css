@@ -145,6 +145,15 @@
     }
 }
 
+/* backdrop-filter over the animated background is costly on mobile: solid glass instead */
+@media (max-width: 767px) {
+    .side-tab-bar {
+        background: rgba(23, 16, 49, 0.92);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+}
+
 @keyframes stbInBottom {
     from {
         opacity: 0;
