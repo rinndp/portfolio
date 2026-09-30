@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import ProjectDetails from "./presentation/views/project-details/ProjectDetails.tsx";
 import SideTabBar from "./presentation/components/side-tab-bar/SideTabBar.tsx";
 import Contact from "./presentation/sections/contact/Contact.tsx";
+import Background from "./presentation/components/background/Background.tsx";
 
 function App() {
     useEffect(() => {
@@ -18,21 +19,24 @@ function App() {
     }, []);
 
     return (
-        <Routes>
-            <Route
-                path="/"
-                element={
-                    <>
-                        <SideTabBar />
-                        <Home />
-                        <AboutMe />
-                        <Projects />
-                        <Contact />
-                    </>
-                }
-            />
-            <Route path="/projects/:slug" element={<ProjectDetails />} />
-        </Routes>
+        <>
+            <Background />
+            <Routes>
+                <Route
+                    path="/"
+                    element={
+                        <>
+                            <SideTabBar />
+                            <Home />
+                            <AboutMe />
+                            <Projects />
+                            <Contact />
+                        </>
+                    }
+                />
+                <Route path="/projects/:slug" element={<ProjectDetails />} />
+            </Routes>
+        </>
     )
 }
 

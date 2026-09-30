@@ -1,0 +1,73 @@
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tech-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.5rem 0.95rem;
+    border-radius: 999px;
+    border: 1px solid rgba(176, 171, 225, 0.14);
+    background: rgba(224, 224, 224, 0.04);
+    backdrop-filter: blur(8px);
+    color: var(--light-gray);
+    font-size: 0.9rem;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    cursor: default;
+}
+
+/* Higher specificity than AOS's [data-aos] transition-property */
+.tech-list .tech-chip {
+    transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s ease,
+    background-color 0.3s ease, box-shadow 0.3s ease, translate 0.3s ease;
+}
+
+.tech-chip-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.tech-chip-glyph {
+    display: grid;
+    place-items: center;
+    width: auto;
+    min-width: 18px;
+    color: var(--brand);
+    font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+}
+
+.tech-chip-dot {
+    width: 7px;
+    height: 7px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: var(--brand);
+    flex-shrink: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .tech-chip:hover {
+        translate: 0 -2px;
+        border-color: color-mix(in srgb, var(--brand) 55%, transparent);
+        background: color-mix(in srgb, var(--brand) 8%, transparent);
+        box-shadow: 0 6px 24px -10px var(--brand);
+    }
+
+    .tech-chip:hover .tech-chip-icon {
+        transform: scale(1.12);
+        filter: drop-shadow(0 0 6px var(--brand));
+    }
+}

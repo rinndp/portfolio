@@ -50,9 +50,6 @@ export const techStack = [
         name: "GitHub",
     },
     {
-        name: "Cursor",
-    },
-    {
         name: "Vercel",
     },
     {

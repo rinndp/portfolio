@@ -5,8 +5,29 @@ import './StyleHome.css';
 import file from "../../../assets/file.png";
 import github from "../../../assets/github-logo.png";
 import linkdin from "../../../assets/linkdin-logo.png";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
+
+const roles = ["React", "Python", "TypeScript", "React Native"];
+
+const orbitLogos = [
+    { src: reactLogo, alt: "react-logo", className: "orbit-logo--react" },
+    { src: viteLogo, alt: "vite-logo", className: "orbit-logo--vite" },
+    { src: tailwindLogo, alt: "tailwind-logo", className: "orbit-logo--tailwind" },
+];
+
+const SplitLetters = ({ text, delay }: { text: string, delay: number }) => (
+    <>
+        {text.split("").map((letter, i) => (
+            <span key={i} className="hero-letter" style={{ "--d": `${delay + i * 0.06}s` } as CSSProperties}>
+                {letter}
+            </span>
+        ))}
+    </>
+)
 
 const Home = () => {
+    const sectionRef = useRef<HTMLElement>(null);
+    const [roleIndex, setRoleIndex] = useState(0);
 
     const handleCVDownload = () => {
         const link = document.createElement("a");
@@ -15,39 +36,95 @@ const Home = () => {
         link.click();
     }
 
+    // Scroll progress of the pinned hero (0 → 1) exposed as --p, no re-renders
+    useEffect(() => {
+        const section = sectionRef.current;
+        if (!section) return;
+        let frame = 0;
+
+        const update = () => {
+            frame = 0;
+            const rect = section.getBoundingClientRect();
+            const total = rect.height - window.innerHeight;
+            const progress = total > 0 ? Math.min(1, Math.max(0, -rect.top / total)) : 0;
+            section.style.setProperty("--p", progress.toFixed(4));
+        };
+        const onScroll = () => {
+            if (!frame) frame = requestAnimationFrame(update);
+        };
+
+        update();
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll);
+        return () => {
+            cancelAnimationFrame(frame);
+            window.removeEventListener("scroll", onScroll);
+            window.removeEventListener("resize", onScroll);
+        };
+    }, []);
+
+    useEffect(() => {
+        const interval = setInterval(() => setRoleIndex(i => (i + 1) % roles.length), 2400);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
-        <>
-            <p id={"home"} className={"mb-3"}>-</p>
-            <div data-aos="zoom-in"
-                 className="home-container md:mt-0 flex flex-col items-center justify-center px-20 text-center gap-4">
-                <div data-aos="fade-right" className="flex flex-row gap-4 justify-center items-center">
-                    <img src={reactLogo} className="logo react h-10 duration-500" alt="react-logo"/>
-                    <img src={viteLogo} className="logo vite h-10 duration-500" alt="vite-logo"/>
-                    <img src={tailwindLogo} className="logo react h-7 mt-1 duration-500" alt="tailwind-logo"/>
+        <section id="home" ref={sectionRef} className="hero">
+            <div className="hero-stage">
+                <div className="hero-orbit" aria-hidden="true">
+                    <div className="hero-orbit-ring"/>
+                    {orbitLogos.map((logo, i) => (
+                        <div key={logo.alt} className="orbit-slot" style={{ "--i": i } as CSSProperties}>
+                            <div className={`orbit-logo ${logo.className}`}>
+                                <img src={logo.src} alt={logo.alt}/>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-                <h1 data-aos="fade-left" className="title md:text-7xl text-6xl font-bold">HI! I'M <span
-                    className={"name"}>Axel Rojas</span></h1>
-                <p data-aos="fade-right" className="description max-w-2xl">
-                    <span className="text-[23px]">Software Engineer specialized in <span className="text-blue-200">React</span> and
-                    <span className="text-green-100"> Python</span>.</span>
-                    <br/><span className="text-gray-300 text-[18px]">I’m looking for new opportunities to keep
-                    growing.</span><br/>
-                </p>
-                <div>
-                    <button className={"download-cv-button shadow-2xl flex flex-row justify-center p-3 gap-2"}
-                            onClick={handleCVDownload}>
-                        <img src={file} alt={"file-logo"} className={"download-cv-logo"}/>
-                        <p className={""}>Download CV</p>
-                    </button>
-                </div>
-                <div className={"flex flex-row mt-2 gap-4"}>
-                    <a href={"https://github.com/rinndp"}><img className={"button shadow-2xl w-10"} src={github}
-                                                               alt={"github-logo"}/></a>
-                    <a href={"https://www.linkedin.com/in/axelrojas3/"}><img className={"button shadow-2xl w-10"} src={linkdin}
-                                                                             alt={"linkedin-logo"}/></a>
+
+                <div className="hero-content">
+                    <span className="hero-badge">
+                        <span className="hero-badge-dot"/>
+                        Open to new opportunities
+                    </span>
+
+                    <h1 className="hero-title">
+                        <span className="hero-hi">Hi! I'm</span>
+                        <span className="hero-name hero-name--first">
+                            <SplitLetters text="AXEL" delay={0.35}/>
+                        </span>
+                        <span className="hero-name hero-name--last">
+                            <SplitLetters text="ROJAS" delay={0.6}/>
+                        </span>
+                    </h1>
+
+                    <p className="hero-role">
+                        Software Engineer specialized in
+                        <span className="hero-role-word-wrapper">
+                            <span key={roleIndex} className="hero-role-word">{roles[roleIndex]}</span>
+                        </span>
+                    </p>
+
+                    <div className="hero-actions">
+                        <button className="hero-cv-button" onClick={handleCVDownload}>
+                            <img src={file} alt="file-logo"/>
+                            <span>Download CV</span>
+                        </button>
+                        <a className="hero-social" href="https://github.com/rinndp" aria-label="GitHub">
+                            <img src={github} alt="github-logo"/>
+                        </a>
+                        <a className="hero-social" href="https://www.linkedin.com/in/axelrojas3/" aria-label="LinkedIn">
+                            <img src={linkdin} alt="linkedin-logo"/>
+                        </a>
+                    </div>
+
+                    <div className="hero-scroll-hint" aria-hidden="true">
+                        <span className="hero-mouse"><span className="hero-mouse-wheel"/></span>
+                        <span>Scroll</span>
+                    </div>
                 </div>
             </div>
-        </>
+        </section>
     )
 }
 

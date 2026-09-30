@@ -6,6 +6,7 @@ import "../../../assets/tailwind-logo.png"
 import {FlatListTech} from "../../components/FlatlistTech.tsx";
 import {useEffect} from "react";
 import type {Url} from "../../../domain/interfaces/Url.ts";
+import {getUrlIcon} from "../../components/UrlIcons.ts";
 
 const ProjectDetails = () => {
     const { state: project } = useLocation();
@@ -44,13 +45,24 @@ const ProjectDetails = () => {
                             <>
                                 <p className={"my-4"}>Sources</p>
                                 <div className={"flex flex-col gap-3"}>
-                                {project.urls.map((url: Url, index: number) => (
-                                        <a className={"project-url"}
-                                            href={url.url}
-                                            key={index}>
-                                            {url.label}
-                                        </a>
-                                    ))}
+                                {project.urls.map((url: Url, index: number) => {
+                                        const icon = getUrlIcon(url.url);
+                                        return (
+                                            <a className={"project-url"}
+                                               href={url.url}
+                                               target="_blank"
+                                               rel="noopener noreferrer"
+                                               key={index}>
+                                                {icon && (
+                                                    <img className={"project-url-icon"} src={icon} alt="" width={18}
+                                                         height={18} loading="lazy"
+                                                         onError={(e) => e.currentTarget.remove()}/>
+                                                )}
+                                                <span className={"project-url-label"}>{url.label}</span>
+                                                <span className={"project-url-arrow"} aria-hidden="true">↗</span>
+                                            </a>
+                                        )
+                                    })}
                                 </div>
                             </>
                         )}

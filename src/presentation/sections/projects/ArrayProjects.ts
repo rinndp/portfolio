@@ -1,7 +1,7 @@
 import wimmCover from "../../../assets/wimm-cover.png";
 import gamingSwipeCover from "../../../assets/gaming-swipe-cover.png";
-import calculatorCover from "../../../assets/calculator-cover.png";
-import type {Project} from "../../../domain/interfaces/Project.ts";
+import helmiCover from "../../../assets/helmiheikkinen-cover.png";
+import type { Project } from "../../../domain/interfaces/Project.ts";
 
 
 const projects: Project[] = [
@@ -117,23 +117,35 @@ const projects: Project[] = [
         ]
     },
     {
-        name: "Calculator",
-        slug: "calculator",
-        img: calculatorCover,
-        description: "Modern calculator designed for simplicity and style.",
-        long_description: "With its minimalist dark interface and smooth rounded buttons, it offers an elegant experience for everyday calculations. The app supports parentheses and basic operations such as addition, subtraction, multiplication, and division, showing instant results as you type. A clear “C” button lets you reset easily, and the layout is fully optimized for both small and large screens, making it perfect for users who enjoy a clean, refined design without sacrificing functionality.",
+        name: "Helmi's Portfolio",
+        slug: "helmi-portfolio",
+        img: helmiCover,
+        description: "Clean and smooth photography portfolio showcasing Helmi Heikkinen's photo sessions.",
+        long_description: "A personal portfolio website built for photographer Helmi Heikkinen. It presents Helmi's photo sessions in a clean, well-organized way, letting the images take center stage while navigation stays smooth and effortless. The site also includes contact information so potential clients can easily get in touch and book a session.",
         technologies: [
             {
-                name: "Android Studio"
+                name: "React"
             },
             {
-                name: "Java"
+                name: "Vite"
+            },
+            {
+                name: "TailwindCSS"
+            },
+            {
+                name: "TypeScript"
+            },
+            {
+                name: "Vercel"
+            },
+            {
+                name: "Git"
             }
         ],
         urls: [
             {
-                label: "View code",
-                url: "https://github.com/rinndp/epsum-pmdm-calculator"
+                label: "Visit Website",
+                url: "https://helmiheikkinen.com/#home"
             }
         ]
     },

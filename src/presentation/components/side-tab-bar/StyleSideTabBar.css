@@ -1,23 +1,176 @@
+/* Floating glass dock: bottom on mobile, left rail on desktop */
+
+.side-tab-bar {
+    --size: 44px;
+    --gap: 6px;
+    --pad: 6px;
+    --progress: 0;
+
+    position: fixed;
+    z-index: 50;
+    left: 50%;
+    bottom: calc(1rem + env(safe-area-inset-bottom));
+    translate: -50% 0;
+    display: flex;
+    gap: var(--gap);
+    padding: var(--pad);
+    border-radius: 999px;
+    background: rgba(23, 16, 49, 0.6);
+    border: 1px solid rgba(176, 171, 225, 0.18);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.6), 0 0 24px -8px var(--pink);
+    /* enters once the hero intro has played */
+    animation: stbInBottom 0.9s 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.stb-item {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: var(--size);
+    height: var(--size);
+    border: 0;
+    border-radius: 50%;
+    background: none;
+    cursor: pointer;
+}
+
+.stb-item img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    filter: invert(1);
+    opacity: 0.5;
+    transition: opacity 0.3s ease, transform 0.4s ease, filter 0.3s ease;
+}
+
+.stb-item:hover img {
+    opacity: 0.9;
+}
+
+.stb-item--active img {
+    opacity: 1;
+    transform: scale(1.1);
+    filter: invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+}
+
+.stb-indicator {
+    position: absolute;
+    top: var(--pad);
+    left: var(--pad);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple), var(--pink));
+    box-shadow: 0 0 20px -2px rgba(83, 73, 171, 0.9);
+    transform: translateX(calc(var(--index) * (var(--size) + var(--gap))));
+    transition: transform 0.55s cubic-bezier(0.3, 1.4, 0.5, 1);
+}
+
+.stb-progress {
+    position: absolute;
+    left: 22px;
+    right: 22px;
+    bottom: 2px;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--purple), var(--light-purple));
+    transform-origin: left center;
+    transform: scaleX(var(--progress));
+}
+
+.stb-label {
+    display: none;
+}
+
 @media (min-width: 768px) and (min-height: 580px) {
     .side-tab-bar {
-        height: 100dvh;
-        display: grid;
-        width: 3em;
-        top: 0;
-        gap: 20%;
+        flex-direction: column;
+        left: 1.25rem;
+        top: 50%;
+        bottom: auto;
+        translate: 0 -50%;
+        animation-name: stbInLeft;
+    }
+
+    .stb-indicator {
+        transform: translateY(calc(var(--index) * (var(--size) + var(--gap))));
+    }
+
+    .stb-progress {
+        left: auto;
+        right: -10px;
+        top: 22px;
+        bottom: 22px;
+        width: 2px;
+        height: auto;
+        transform-origin: center top;
+        transform: scaleY(var(--progress));
+        box-shadow: 0 0 8px var(--light-purple);
+    }
+
+    .stb-label {
+        display: block;
+        position: absolute;
+        left: calc(100% + 20px);
+        top: 50%;
+        padding: 0.3rem 0.75rem;
+        border-radius: 8px;
+        background: rgba(23, 16, 49, 0.9);
+        border: 1px solid rgba(176, 171, 225, 0.2);
+        color: var(--light-purple);
+        font-size: 0.7rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        white-space: nowrap;
+        pointer-events: none;
+        opacity: 0;
+        transform: translate(-8px, -50%);
+        transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .stb-item:hover .stb-label,
+    .stb-item:focus-visible .stb-label {
+        opacity: 1;
+        transform: translate(0, -50%);
     }
 }
 
-.side-tab-bar {
-    top: 0;
-    background-color: var(--dark-purple);
-    box-shadow: 0 0 11px var(--pink);
+/* Keep page content clear of the bottom dock */
+@media (max-width: 767px), (max-height: 579px) {
+    #root {
+        padding-bottom: 5rem;
+    }
 }
 
-.button {
-    transition: all 0.3s ease;
+@keyframes stbInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(120%);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
 }
 
-.button:hover {
-    transform: scale(1.15);
+@keyframes stbInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-140%);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .side-tab-bar,
+    .stb-indicator {
+        animation: none;
+        transition: none;
+    }
 }

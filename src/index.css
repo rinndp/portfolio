@@ -8,13 +8,23 @@
 html, body {
     width: 100%;
     margin-bottom: -4000px;
-    background: var(--dark-purple) linear-gradient(to bottom, #171031, #2c1634, #171031);
-    overflow-x: hidden;
+    /* clip (not hidden): hidden turns body into a scroll container and breaks position: sticky */
+    overflow-x: clip;
+}
+
+/* Solid base only on <html>: a body background would paint over the fixed
+   <Background /> layer (z-index: -1) and hide the grid and orbs */
+html {
+    background: #171031;
+}
+
+body {
+    background: transparent;
 }
 
 :root {
     overscroll-behavior: none;
-    overflow-x: hidden;
+    overflow-x: clip;
     background-size: cover;
     overflow-anchor: none;
     color: var(--light-gray);
