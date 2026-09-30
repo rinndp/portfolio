@@ -3,6 +3,7 @@
 @font-face {
     font-family: "Frutiger";
     src: url("/src/assets/fonts/frutiger.ttf");
+    font-display: swap;
 }
 
 html, body {

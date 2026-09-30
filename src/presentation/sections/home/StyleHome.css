@@ -336,6 +336,18 @@
     .hero-name--last {
         -webkit-text-stroke-width: 1.5px;
     }
+
+    /* Entrance animations (blur-heavy) delay first paint on mobile: show content immediately */
+    .hero-orbit-ring,
+    .orbit-logo img,
+    .hero-badge,
+    .hero-hi,
+    .hero-letter,
+    .hero-role,
+    .hero-actions,
+    .hero-scroll-hint > * {
+        animation: none;
+    }
 }
 
 /* ---------- Keyframes ---------- */
