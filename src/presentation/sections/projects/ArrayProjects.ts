@@ -120,8 +120,8 @@ const projects: Project[] = [
         name: "Helmi's Portfolio",
         slug: "helmi-portfolio",
         img: helmiCover,
-        description: "Clean and smooth photography portfolio showcasing Helmi Heikkinen's photo sessions.",
-        long_description: "A personal portfolio website built for photographer Helmi Heikkinen. It presents Helmi's photo sessions in a clean, well-organized way, letting the images take center stage while navigation stays smooth and effortless. The site also includes contact information so potential clients can easily get in touch and book a session.",
+        description: "Clean and smooth modeling portfolio showcasing Helmi Heikkinen's photo shoots and work.",
+        long_description: "A personal portfolio website built for model Helmi Heikkinen. It presents Helmi's shoots and modeling work in a clean, well-organized way, letting the images take center stage while navigation stays smooth and effortless. The site also includes contact information so brands, photographers and agencies can easily get in touch for bookings and collaborations.",
         technologies: [
             {
                 name: "React"
