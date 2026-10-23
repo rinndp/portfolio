@@ -16,7 +16,7 @@ const TechChip = ({tech, index, animation}: { tech: Tech, index: number, animati
         <li data-aos={animation ? "fade-up" : undefined}
             data-aos-delay={animation ? Math.min(index * 40, 400) : undefined}
             className="tech-chip"
-            style={{"--brand": icon?.color ?? "var(--light-purple)"} as CSSProperties}>
+            style={{"--brand": icon?.color ?? "var(--neon-yellow)"} as CSSProperties}>
             {icon?.glyph ? (
                 <span className="tech-chip-icon tech-chip-glyph" aria-hidden="true">{icon.glyph}</span>
             ) : icon?.url && !iconFailed ? (

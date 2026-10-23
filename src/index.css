@@ -16,7 +16,7 @@ html, body {
 /* Solid base only on <html>: a body background would paint over the fixed
    <Background /> layer (z-index: -1) and hide the grid and orbs */
 html {
-    background: #171031;
+    background: #050b0d;
 }
 
 body {
@@ -29,11 +29,11 @@ body {
     background-size: cover;
     overflow-anchor: none;
     color: var(--light-gray);
-    --light-purple: #b0abe1;
-    --purple: #5349ab;
-    --dark-purple: rgba(15, 7, 35, 0.91);
-    --button-color: #2c1634;
-    --pink: #612367;
+    --neon-yellow: #fcee0a;
+    --cyan: #00f0ff;
+    --surface: rgba(4, 12, 14, 0.91);
+    --button-color: #0b2a2e;
+    --lime: #e1e832;
     --white: #ffffff;
     --light-gray: #e0e0e0;
     --input-bg: rgba(224, 224, 224, 0.11);
@@ -49,11 +49,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: var(--dark-purple);
+    background: var(--surface);
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #4d1457;
+    background: #007f8a;
     border-radius: 6px;
 }
 
@@ -86,7 +86,7 @@ body::-webkit-scrollbar-thumb {
     width: 120px;
     height: 6px;
     border-radius: 3px;
-    background: linear-gradient(90deg, var(--purple), var(--light-purple), var(--purple));
+    background: linear-gradient(90deg, var(--cyan), var(--neon-yellow), var(--cyan));
     background-size: 220% 100%;
     animation: barFlow 6s ease-in-out infinite;
 }

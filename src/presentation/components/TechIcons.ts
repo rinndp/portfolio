@@ -1,5 +1,5 @@
 // Icons served by the Simple Icons CDN: https://cdn.simpleicons.org/<slug>/<hex>
-// Brands whose official color is too dark for the purple background use a lighter tone.
+// Brands whose official color is too dark for the dark background use a lighter tone.
 // `src` overrides the CDN icon (brands missing from Simple Icons); `glyph` renders text instead of an image.
 
 interface TechIcon {
